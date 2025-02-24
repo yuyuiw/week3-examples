@@ -1,0 +1,159 @@
+#box-container {
+  /* This turns the box-container into a flexbox */
+  display: flex;
+
+  /* Color, sizing options */
+  background-color: rgb(238, 235, 235);
+  min-width: 500px;
+  min-height: 500px;
+  padding: 10px;
+
+  /* ====START EDITING==== */
+
+  /* flex-direction lets you choose your main axis.
+     ↕ Cross Axis ↕                             ↓ Main Axis ↓
+           ▴                                          ▴
+           |                                          |
+           |                                          |  
+   ◂ ----- | ----- ▸ → Main Axis →            ◂ ----- | ----- ▸ ↔ Cross Axis ↔
+           |                                          |
+           |                                          |
+           ▾                                          ▾
+    flex-direction: row;                       flex-direction: column;
+  */
+  /* Default: row */
+  /* Options: row, column, row-reverse, column-reverse */
+  flex-direction: row;
+
+  /* justify-content affects the distribution of elements along the main axis */
+  /* Default: flex-start */
+  /* Options: flex-start, center, flex-end, 
+              space-around, space-evenly */
+  justify-content: flex-start;
+
+  /* align-items affects the distirbution of elements along the cross axis */
+  /* Default: stretch */
+  /* Options: stretch, flex-start, center, flex-end, baseline */
+  align-items: stretch;
+
+  /* gap specifies the spacing between flex itmes. */
+  /* Default: 0 */
+  /* Common units: px, %, em, rem  */
+  gap: 0;
+  /* ====END EDITING  ==== */
+}
+
+#box1 {
+  background-color: rgb(24, 218, 24);
+  /* ====START EDITING==== */
+  /* align-self is used to override the alignment of a specific element
+     along the cross-axis.
+     Default: auto
+     Options: auto, stretch, flex-start, center, flex-end, baseline
+  */
+  align-self: auto;
+
+  /* flex-grow allows an item to grow relative to others */
+  /* Default: 0     */
+  /* Options: 0 → ∞ */
+  flex-grow: 0;
+
+  /* flex-shrink allows an item to shrink relative to others */
+  /* Default: 1 */
+  flex-shrink: 0;
+
+  /* flex-basis defines the initial size of an item before growing or shrinking */
+  /* Default: auto */
+  /* Options: ?px, ?rem, etc. */
+  flex-basis: auto;
+  /* ====END EDITING  ==== */
+}
+
+#box2 {
+  background-color: rgb(214, 214, 44);
+  /* ====START EDITING==== */
+  align-self: auto;    /* Default: auto */
+  flex-grow: 0;        /* Default: 0    */     
+  flex-basis: auto;    /* Default: auto */
+  /* ====END EDITING  ==== */
+}
+
+#box3 {
+  background-color: red;
+  /* ====START EDITING==== */
+  align-self: auto;    /* Default: auto */
+  flex-grow: 0;        /* Default: 0    */
+  flex-basis: auto;    /* Default: auto */
+  /* ====END EDITING  ==== */
+}
+
+#box4 {
+  background-color: rgb(27, 138, 212);
+  /* ====START EDITING==== */
+  align-self: auto;    /* Default: auto */
+  flex-grow: 0;        /* Default: 0    */
+  flex-basis: auto;    /* Default: auto */
+  /* ====END EDITING  ==== */
+}
+
+html,
+body {
+  /* Eliminate any default margin and padding */
+  margin: 0;
+  padding: 0;
+  /* Ensure that html and body occupy entire viewport */
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  /* Made body a flexbox to align the #box-container.
+     Remember by default flex-direction is row.
+  */
+  display: flex;
+  /* Center flexbox on main axis */
+  justify-content: center;
+  /* Center flexbox on cross axis */
+  align-items: center;
+  /* Force space between axes and  */
+  gap: 30px;
+}
+
+#box-container > div {
+  /* ====START EDITING==== */
+
+  /* ====END EDITING  ==== */
+
+  /* Neither width nor height for the boxes can go below 80px. */
+  min-width: 80px;
+  min-height: 80px;
+
+  /* Stylize box labels */
+  color: white;
+  font-size: larger;
+
+  /* Center number label for all divs */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/* Feel free to uncomment the stuff below 
+   for wacky box sizes */
+
+/* #box1 > h2 {
+  font-size: 50px;
+}
+
+#box2 > h2 {
+  font-size: 20px;
+}
+
+#box3 > h2 {
+  font-size: 44px;
+}
+
+#box4 > h2 {
+  font-size: 30px;
+} */

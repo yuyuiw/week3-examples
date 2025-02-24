@@ -1,0 +1,33 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body, .outer-box, .inner-box {
+  /* Center everything */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.outer-box, .inner-box {
+  width: 500px;
+  height: 100px;
+}
+
+.outer-box {
+  background-color: gold;
+  border: 5px solid green;
+}
+
+.inner-box {
+  background-color: cyan;
+  border: 5px solid red;
+
+  /* UNCOMMENT AND MESS AROUND WITH THE LINES BELOW */
+  /* margin: 30px; */
+  /* padding: 30px; */
+}
