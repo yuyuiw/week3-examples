@@ -23,7 +23,7 @@
   */
   /* Default: row */
   /* Options: row, column, row-reverse, column-reverse */
-  flex-direction: row;
+  flex-direction: column;
 
   /* justify-content affects the distribution of elements along the main axis */
   /* Default: flex-start */
@@ -51,12 +51,12 @@
      Default: auto
      Options: auto, stretch, flex-start, center, flex-end, baseline
   */
-  align-self: auto;
+  align-self: flex-start;
 
   /* flex-grow allows an item to grow relative to others */
   /* Default: 0     */
   /* Options: 0 → ∞ */
-  flex-grow: 0;
+  flex-grow: 1;
 
   /* flex-shrink allows an item to shrink relative to others */
   /* Default: 1 */
@@ -72,17 +72,18 @@
 #box2 {
   background-color: rgb(214, 214, 44);
   /* ====START EDITING==== */
-  align-self: auto;    /* Default: auto */
+  align-self: flex-end;    /* Default: auto */
   flex-grow: 0;        /* Default: 0    */     
   flex-basis: auto;    /* Default: auto */
   /* ====END EDITING  ==== */
+  justify-content: flex-end;
 }
 
 #box3 {
   background-color: red;
   /* ====START EDITING==== */
-  align-self: auto;    /* Default: auto */
-  flex-grow: 0;        /* Default: 0    */
+  align-self: flex-start;    /* Default: auto */
+  flex-grow: 1;        /* Default: 0    */
   flex-basis: auto;    /* Default: auto */
   /* ====END EDITING  ==== */
 }
@@ -90,7 +91,7 @@
 #box4 {
   background-color: rgb(27, 138, 212);
   /* ====START EDITING==== */
-  align-self: auto;    /* Default: auto */
+  align-self: flex-end;    /* Default: auto */
   flex-grow: 0;        /* Default: 0    */
   flex-basis: auto;    /* Default: auto */
   /* ====END EDITING  ==== */
@@ -144,16 +145,20 @@ body {
 
 /* #box1 > h2 {
   font-size: 50px;
+  align-items: flex-start;
 }
 
 #box2 > h2 {
   font-size: 20px;
+  justify-content: flex-end;
 }
 
 #box3 > h2 {
   font-size: 44px;
+  justify-content: flex-start;
 }
 
 #box4 > h2 {
   font-size: 30px;
+  justify-content: flex-end;
 } */

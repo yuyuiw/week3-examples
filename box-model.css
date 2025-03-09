@@ -26,6 +26,7 @@ body, .outer-box, .inner-box {
 .inner-box {
   background-color: cyan;
   border: 5px solid red;
+  padding: 30px;
 
   /* UNCOMMENT AND MESS AROUND WITH THE LINES BELOW */
   /* margin: 30px; */
